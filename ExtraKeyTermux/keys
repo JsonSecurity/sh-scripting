@@ -1,0 +1,2 @@
+    custom:::extra-keys = [['ESC','|','-', {key: HOME, display: 'INC'},'UP',{key: END, display: 'FIN'}, 'APOSTROPHE', {macro: "clear ENTER", display: '×'}],['TAB','CTRL','/','LEFT','DOWN','RIGHT','KEYBOARD','DEL']]
+    bash:::extra-keys = [['ESC','|','(', {key: HOME, display: 'INC'},'UP',{key: END, display: 'FIN'}, 'APOSTROPHE', {macro: "clear ENTER", display: '×'}],['TAB','CTRL','$','LEFT','DOWN','RIGHT','KEYBOARD','DEL']]
