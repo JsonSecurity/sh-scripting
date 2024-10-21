@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 # SHELL Scripting
-=======
+----
 # Extrakeys
 Extrakeys is a tool designed to increase the number of keys in termux.
 
