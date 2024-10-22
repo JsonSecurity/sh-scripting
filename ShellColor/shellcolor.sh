@@ -46,8 +46,8 @@ U="$bord [${cent}${bord}]${cent}❯$excr"
 YN="$bord[${cent}Y${bord}/${cent}N${bord}]${excr}"
 
 #info
-autor="${bol}$bord [${bol}${info}𝙹𝚜𝚘𝚗 𝚂𝚎𝚌𝚞𝚛𝚒𝚝𝚢${bord}]"
-script="${bol}$bord [${bol}${info}WhereLoc$bord -$info beta${bord}]"
+autor="${bol}$bord [$W ${info}Json Security${bord} ]"
+script="${bol}$bord [$W ${info}Gemini${bord} ]"
 
 clear
 
