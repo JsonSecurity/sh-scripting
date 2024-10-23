@@ -56,21 +56,36 @@ verify() {
 	fi
 }
 
+banner() {
+	echo -e """$W
+          _
+         | | _____ _   _ ___
+  _____  | |/ / _ \ | | / __|  _____
+ |_____| |   <  __/ |_| \__ \ |_____|
+         |_|\_\___|\__, |___/     
+                    |___/
+
+            Json Security
+	"""
+}
+
 setkey() {
 	log=$(cat keys | grep $skey | awk '{print $2}' FS=":::")
 	
 	if [[ -n $log ]];then
 		echo $log > $ruta
-		echo -e "\n$T extra-keys$G 1.0 $autor\n"
+		#echo -e "\n$T extra-keys$G 1.0 $autor\n"
+		banner
 		termux-reload-settings
-		echo -e "$S Key configurado:$G $skey"
+		echo -e "[+] key configurated: $skey" | bat -l java -pp
 	else
-		echo -e "\n$A No encontrado"
+		echo -e "\n[!] key not found"
 	fi
 }
 
 help() {
-	echo -e "\n[!] extra-keys Json Security;;\n\n[*] Usage:\n    ./extra-keys.sh <namekey>\n\n[+] Keys:" | bat -l java -pp
+	banner
+	echo -e "[*] Usage:\n    ./extra-keys.sh <namekey>\n\n[+] Keys:" | bat -l java -pp
 	cat keys | awk '{print $1}' FS=":::" | bat -l java -pp
 }
 
