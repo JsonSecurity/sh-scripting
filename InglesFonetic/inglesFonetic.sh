@@ -40,7 +40,7 @@ usage() {
  [+] Usage:
 
    $0 -p	# palabra
-" | bat -l java -pp
+"
 }
 
 fonetic() {
