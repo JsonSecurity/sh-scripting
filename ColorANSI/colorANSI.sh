@@ -3,16 +3,18 @@
 tmp="\e[38;2;0;255;94m"
 exa=
 W="\e[0m"
+cc="\e[38;2;255;0;64m"
 
 banner() {
-	echo -e """
-             _    _   _ ____ ___
-            / \  | \ | / ___|_ _|
-  _____    / _ \ |  \| \___ \| |   _____
- |_____|  / ___ \| |\  |___) | |  |_____|
-         /_/   \_\_| \_|____/___|
-
-           ${tmp}  - Json Security - ${W}"""
+	echo -e """$cc
+             _____     _______      _________ .___           
+            /  _  \    \      \    /   _____/ |   |          
+   ______  /  /_\  \   /   |   \   \_____  \  |   |   ______ 
+  /_____/ /    |    \ /    |    \  /        \ |   |  /_____/ 
+          \____|__  / \____|__  / /_______  / |___|          
+                  \/          \/          \/                                                    
+                   $W [$cc Json Security$W ] ${W}
+"""
 }
 
 hex_to_ansi() {
@@ -25,13 +27,10 @@ hex_to_ansi() {
 }
 
 banner
-while true;do
 
-echo -e "\n${W}[+] Example: FF5803"
-printf "[?] HEX: "
-read hex_color
+if [[ ! $1 ]];then
+	echo -e "\n [!] $0 <HEX>\n"
+	exit 1
+fi
 
-echo ""
-echo -e $(hex_to_ansi "$hex_color")
-
-done
+echo -e $(hex_to_ansi "$1")
