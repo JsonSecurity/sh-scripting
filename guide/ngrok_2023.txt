@@ -1,0 +1,21 @@
+$ apt update && apt upgrade -y
+$ termux-setup-storage
+$ pkg install wget -y
+$ pkg install proot -y
+$ pkg install openssl-tool -y
+$ pkg install unzip -y
+
+$ wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Kali/kali.sh && bash kali.sh
+
+$ wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.zip
+
+# Ojo, puede que está versión de Ngrok no sea compatible para todos los teléfonos, sería mejor entrar a la página oficial de Ngrok e ir probando con cual de las versiones le funciona.
+
+$ unzip ngrok-stable-linux-arm64.zip
+$ rm -rf ngrok-stable-linux-arm64.zip
+$ chmod +x ngrok
+$ mv ngrok kali-fs/root
+
+$ ./start-kali.sh
+$ chmod +x ngrok
+$ ./ngrok authtoken "Tu token va aquí"
