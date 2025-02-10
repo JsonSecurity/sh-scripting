@@ -1,0 +1,14 @@
+# buscador de camaras
+
+apt update
+apt upgrade -y
+
+pkg install git -y
+pkg install python -y
+
+git clone https://github.com/AngelSecurityTeam/Cam-Hackers
+
+cd Cam-Hackers
+pip install -r requirements.txt
+
+python3 cam-hackers.py
