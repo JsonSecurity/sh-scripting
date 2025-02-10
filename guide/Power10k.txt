@@ -2,9 +2,8 @@
 
 pkg install zsh -y
 pkg install git -y
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh
-/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/
-powerlevel10k echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme'
->>~/.zshrc
-Abre una nueva terminal y elige lo que mejor te convenga.
+powerlevel10k echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
+
+# Abre una nueva terminal y elige lo que mejor te convenga.
