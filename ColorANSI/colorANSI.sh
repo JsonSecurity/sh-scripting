@@ -24,13 +24,22 @@ hex_to_ansi() {
     local blue=$((16#${hex:4:2}))
 
     echo -e "\e[38;2;${red};${green};${blue}m  e[38;2;${red};${green};${blue}m"
+
 }
 
 banner
 
-if [[ ! $1 ]];then
-	echo -e "\n [!] $0 <HEX>\n"
-	exit 1
+if [[ ! $1 ]]; then
+    echo -e "\n [!] $0 <HEX>\n"
+    exit 1
 fi
 
-echo -e $(hex_to_ansi "$1")
+HEX_CLEANED="${1#\#}"
+
+COLOR=$(hex_to_ansi "$HEX_CLEANED")
+
+echo "\\${COLOR}" | tr -d ' '
+echo -e """$cc
+   _________________________________________________________  
+  /________________________________________________________/
+"""
